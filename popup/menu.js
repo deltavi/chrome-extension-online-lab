@@ -8,14 +8,14 @@ document.addEventListener('click', (e) => {
     }
   }
   else if (e.target.getAttribute('url')) {
-    browser.tabs.create({
+    chrome.tabs.create({
       'url': e.target.getAttribute('url')
     });
     window.close();
     return;
   } else if (e.target.id === 'gotoGitHub') {
     
-    browser.tabs.create({
+    chrome.tabs.create({
       'url': 'https://github.com/deltavi/bookmarks/blob/master/online-lab.md'
     });
     window.close();
